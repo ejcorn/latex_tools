@@ -9,7 +9,7 @@ This script will take in a set of LaTeX .tex documents, identify the order of ap
 
 After running the script, you need to manually copy and paste around your figure blocks so that they are in order. You can use this script to check the order of your labels after doing so (`label_order` variable). The script also assumes you will order your main text figures by yourself, but can easily use it to check the order of appearace of references by changing line 33 to 
 ```python
-ref_usages = np.array(unlist([re.findall('\\\\ref\{fig:figureS.*?\}',x) for x in reflines]))
+ref_usages = np.array(unlist([re.findall('\\\\ref\{fig:figure.*?\}',x) for x in reflines]))
 ```
 
 The script requires 2 input variables:
